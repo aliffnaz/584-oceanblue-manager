@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -74,21 +77,21 @@
         <div class="sidebar-navigation">
             <nav>
                 <ul class="level-1">
-                    <li class=""><a href="managerHome.html"><i class="bi bi-house" style="font-size: 25px;"></i>
+                    <li class=""><a href=""><i class="bi bi-house" style="font-size: 25px;"></i>
                             &nbsp;Home</a></li>
-                    <li class=""><a href="managerUpdateStatus.html"><i class="bi bi-clipboard-check"
+                    <li class=""><a href=""><i class="bi bi-clipboard-check"
                                 style="font-size: 25px;"></i>&nbsp; Room Reservation</a></li>
-                    <li><a href="managerStaffList.html"><i class="bi bi-person-badge"
+                    <li><a href=""><i class="bi bi-person-badge"
                                 style="font-size: 25px;"></i>&nbsp; Manage Staff</a></li>
-                    <li><a href="managerRoomList.html"><i class="bi bi-pencil-square"
+                    <li><a href=""><i class="bi bi-pencil-square"
                                 style="font-size: 25px;"></i>&nbsp; Manage Room</a></li>
-                    <li><a href="managerRoomServiceList.html"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
+                    <li><a href=""><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
                             Manage Room Service</a></li>
-                    <li><a href="managerGuestList.html"><i class="bi bi-people"
+                    <li><a href=""><i class="bi bi-people"
                             style="font-size: 25px;"></i>&nbsp; Manage Guest</a></li>
-                    <li><a href="managerGenerateReport.html"><i class="bi bi-file-earmark-bar-graph"
+                    <li><a href=""><i class="bi bi-file-earmark-bar-graph"
                                 style="font-size: 25px;"></i>&nbsp; Generate Report</a></li>
-                    <li class="mt-5"><a href="guestLogin.html" class="btn btn-danger pt-3"
+                    <li class="mt-5"><a href="" class="btn btn-danger pt-3"
                             style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
                 </ul>
                 <div class="panel_footer">
@@ -115,7 +118,7 @@
                 <div class="col-md card card-body py-5">
                     <div class="row m-5">
                         <div class="col-2 text-center">
-                            <a href="managerRoomServiceList.html">
+                            <a href="">
                                 <div class="bi bi-arrow-left-circle" style="font-size: 50px;"></div>
                             </a>
                         </div>
@@ -137,7 +140,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="S01">
+                            <input type="text" name="serviceID" id="" class="form-control" placeholder="S01">
                         </div>
                     </div>
                     <div class="row m-3">
@@ -148,7 +151,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="Barbecue Set">
+                            <input type="text" name="serviceName" id="" class="form-control" placeholder="Barbecue Set">
                         </div>
                     </div>
                     <div class="row m-3">
@@ -159,7 +162,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="Kitchen">
+                            <input type="text" name="serviceType" id="" class="form-control" placeholder="Kitchen">
                         </div>
                     </div>
                     <div class="row m-3">
@@ -170,21 +173,35 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="RM15.00">
+                            <input type="text" name="servicePrice" id="" class="form-control" placeholder="RM15.00">
+                        </div>
+                    </div>
+                    <div class="row m-3">
+                        <div class="col-1"></div>
+                        <div class="col pt-3">
+                            <span>
+                                <h6>Service Status</h6>
+                            </span>
+                        </div>
+                        <div class="col-8">
+                            <select name="roomType" id="" class="wide">
+                                    <option value="Available" style="font-size: 16px;">Available</option>
+                                    <option value="Booked" style="font-size: 16px;">Booked</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row m-5">
                         <div class="col text-center">
-                            <a href="ManagerRoomServiceList.html" class="btn btn-dark btn-lg"
+                            <a href="" class="btn btn-dark btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px" onclick="success()">Add</a>
 
-                            <script>
-                                function success() {
-                                    alert("Successfully Added");
-                                }
-                            </script>
+                            // <script>
+                            //     function success() {
+                            //         alert("Successfully Added");
+                            //     }
+                            // </script>
                             &nbsp;
-                            <a href="ManagerRoomServiceList.html" class="btn btn-danger btn-lg"
+                            <a href="" class="btn btn-danger btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Cancel</a>
                         </div>
                     </div>
