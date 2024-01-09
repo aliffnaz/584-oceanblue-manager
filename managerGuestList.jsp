@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>   
+    
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -134,18 +138,19 @@
                                 <th class="text-center" colspan="2">Action</th>
                             </thead>
                             <tbody>
+            <c:forEach var="guest" items="${guests}">
                                 <tr>
-                                    <td class="text-center">010205012313</td>
-                                    <td class="text-center">Haiqal</td>
-                                    <td class="text-center">011-17246568</td>
-                                    <td class="text-center">020907-14-1111</td>
-                                    <td class="text-center">Male</td>
-                                    <td class="text-center">Malay</td>
-                                    <td class="text-center">Muslim</td>
-                                    <td class="text-center">275 Jln 4 Off Jln Chan Sow Lin, 55200 Wilayah Persekutuan Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</td>
-                                    <td class="text-center"><a href="managerViewGuest.html"><i class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
-                                    <td class="text-center"><a href=" "><i class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
+                                    <td class="text-center"><c:out value="${guest.guestICNumber}"/></td>
+                                    <td class="text-center"><c:out value="${guest.guestName}"/></td>
+                                    <td class="text-center"><c:out value="${guest.guestPhoneNumber}"/></td>
+                                    <td class="text-center"><c:out value="${guest.guestGender}"/></td>
+                                    <td class="text-center"><c:out value="${guest.guestRace}"/></td>
+                                    <td class="text-center"><c:out value="${guest.guestReligion}"/></td>
+                                    <td class="text-center"><c:out value="${guest.guestEmail}"/></td>
+                                    <td class="text-center"><c:out value="${guest.guestAddress}"/></td>
+                                    <td class="text-center"><a href="managerViewGuest.jsp?ic=<c:out value="${guest.guestICNumber}"/>"><i class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
                                 </tr>
+            </c:forEach>
                                 <tr>
                                     <td class="text-center">890524054568</td>
                                     <td class="text-center">Azalea</td>
