@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>   
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -129,20 +132,22 @@
                                 <th class="text-center" colspan="2">Action</th>
                             </thead>
                             <tbody>
+                                <c:forEach var="service" items="${services}">
                                 <tr>
-                                    <td class="text-center">S01</td>
-                                    <td>Barbecue Set</td>
-                                    <td>Kitchen</td>
-                                    <td>RM15.00</td>
+                                    <td class="text-center"><c:out value="${service.serviceID}"/></td>
+                                    <td><c:out value="${service.serviceName}"/></td>
+                                    <td><c:out value="${service.serviceType}"/></td>
+                                    <td><c:out value="${service.servicePrice}"/></td>
                                     <td class="text-center">
-                                        <a href="ManagerUpdateRoomService.html"><i class="bi bi-eye-fill"
+                                        <a href="managerUpdateService.jsp?id=<c:out value="${service.serviceID}"/>"><i class="bi bi-eye-fill"
                                                 style="font-size: 20px;"></i></a>
 
                                     </td>
-                                    <td class="text-center"><a href=" " onclick="success()"><i class="bi bi-trash3-fill"
+                                    <td class="text-center"><a href="StaffController?id=<c:out value="${service.serviceID}"/>" onclick="success()"><i class="bi bi-trash3-fill"
                                                 style="font-size: 20px;"></i></a>
                                     </td>
                                 </tr>
+                                                    </c:forEach>
                                 <tr>
                                     <td class="text-center">S02</td>
                                     <td>Dapur & Gas (SET A)</td>
