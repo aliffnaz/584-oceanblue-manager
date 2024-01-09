@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -116,7 +117,7 @@
     <div class="container margin_120_95" id="first_section">
       <div class="row justify-content-between flex-lg-row-reverse align-items-center">
         <div class="card card-body p-4">
-          <h2>Welcome, Manager !</h2>
+          <h2>Welcome, <c:out value="${staff.staffName}"/> !</h2>
 
           <div class="clearFix"></div>
 
@@ -126,7 +127,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div id="creditSales" class="progressBar"></div>
-                    <h3>RM36,059</h3>
+                    <h3>rm</h3>
                     <span class="progressTitle">Standard Room</span>
                   </div>
                 </div>
@@ -136,7 +137,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div id="channelSales" class="progressBar"></div>
-                    <h3>RM24,834</h3>
+                    <h3>RM</h3>
                     <span class="progressTitle">Deluxe Room</span>
                   </div>
                 </div>
@@ -146,7 +147,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div id="directSales" class="progressBar"></div>
-                    <h3>RM15,650</h3>
+                    <h3>rm</h3>
                     <span class="progressTitle">Total</span>
                   </div>
                 </div>
