@@ -135,17 +135,7 @@
 
                         </div>
                     </div>
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Room ID</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="R1" disabled>
-                        </div>
-                    </div>
+                   <form action="" metho="post">
                     <div class="row m-3">
                         <div class="col-1"></div>
                         <div class="col pt-3">
@@ -154,7 +144,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="A01">
+                            <input type="text" name="" value="<c:out value="${room.roomID}"/>" id="" class="form-control" placeholder="A01">
                         </div>
                     </div>
                     <div class="row m-3">
@@ -165,7 +155,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="number" name="" id="" class="form-control" placeholder="4">
+                            <input type="number" name="maxGuest" value="<c:out value="${room.maxGuest}"/>" id="" class="form-control" placeholder="4">
                         </div>
                     </div>
                     <div class="row m-3">
@@ -176,7 +166,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="RM80.00">
+                            <input type="text" name="roomRate" value="<c:out value="${room.roomRate}"/>" id="" class="form-control" placeholder="RM80.00">
                         </div>
                     </div>
                     <div class="row m-3">
@@ -188,8 +178,8 @@
                         </div>
                         <div class="col-8">
                             <select name="roomType" id="" class="form-control">
-                                <option value="standard" style="font-size: 16px;">Standard</option>
-                                <option value="deluxe" style="font-size: 16px;">Deluxe</option>
+                                <option value="standard" style="font-size: 16px;" <c:if test=${room.roomType == "Standard"} >Selected</c:if>>Standard</option>
+                                <option value="deluxe" style="font-size: 16px;" <c:if test=${room.roomType == "Deluxe"} >Selected</c:if> >Deluxe</option>
                             </select>
                         </div>
                     </div>
@@ -201,12 +191,12 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="22 x 28 ft">
+                            <input type="text" name="roomSize" value="<c:out value="${room.roomSize}">" id="" class="form-control" placeholder="22 x 28 ft">
                         </div>
                     </div>
                     <div class="row m-5">
                         <div class="col text-center">
-                            <a href="managerViewRoom.html" class="btn btn-dark btn-lg"
+                            <a href="StaffController?action=VIEW&user=manager" class="btn btn-dark btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px" onclick="success()">Update</a>
                             <script>
                                 function success() {
