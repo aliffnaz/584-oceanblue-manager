@@ -148,9 +148,9 @@
                                 <c:forEach var="staff" items="${staffs}">
                                 <tr>
                                     <td class="text-center">1</td>
-                                    <td><c:out valiue="${staff.staffName}"/></td>
-                                    <td><c:out valiue="${staff.staffICNumber}"/></td>
-                                    <td><c:out valiue="${staff.staffRole}"/></td>
+                                    <td><c:out value="${staff.staffName}"/></td>
+                                    <td><c:out value="${staff.staffICNumber}"/></td>
+                                    <td><c:out value="${staff.staffRole}"/></td>
                                     <td class="text-center"><a href="managerViewStaff.jsp?id=<c:out valiue="${staff.staffID}"/>"><i class="bi bi-eye-fill"></i></a></td>
                                 </tr>
                                     </c:forEach>

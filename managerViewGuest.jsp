@@ -149,7 +149,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="guestICNumber" value="<c:out value="${guest.guestICNumber}">" id="" class="form-control" placeholder="010205012313" disabled>
+                            <input type="text" name="guestICNumber" value="<c:out value="${guest.guestICNumber}"/>" id="" class="form-control" placeholder="010205012313" disabled>
                         </div>
                     </div>
 
@@ -161,7 +161,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="guestName" value="<c:out value="${guest.guestICNumber}">"  id="" class="form-control" placeholder="Haiqal" disabled>
+                            <input type="text" name="guestName" value="<c:out value="${guest.guestICNumber}"/>"  id="" class="form-control" placeholder="Haiqal" disabled>
                         </div>
                     </div>
 
@@ -173,7 +173,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="guestPhoneNumber" value="<c:out value="${guest.guestICNumber}">" id="" class="form-control" placeholder="011-17246568" disabled>
+                            <input type="text" name="guestPhoneNumber" value="<c:out value="${guest.guestICNumber}"/>" id="" class="form-control" placeholder="011-17246568" disabled>
                         </div>
                     </div>
 
@@ -188,8 +188,8 @@
                         <div class="col-8">
                             <select name="guestGender" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="Male" <c:if test="${guest.guestGender == "Male"}">Selected</c:if>>Male</option>
-                                <option value="Female" <c:if test="${guest.guestGender == "Female"}">Selected</c:if>>Female</option>
+                                <option value="Male" <c:if test="${guest.guestGender == 'Male'}">Selected</c:if>>Male</option>
+                                <option value="Female" <c:if test="${guest.guestGender == 'Female'}">Selected</c:if>>Female</option>
                             </select>
                         </div>
                     </div>
@@ -204,9 +204,9 @@
                         <div class="col-8">
                             <select name="guestRace" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="Melayu" <c:if test="${guest.guestGender == "Melayu"}">Selected</c:if>>Melayu</option>
-                                <option value="Cina" <c:if test="${guest.guestGender == "Cina"}">Selected</c:if>>Cina</option>
-                                <option value="India" <c:if test="${guest.guestGender == "India"}">Selected</c:if>>India</option>
+                                <option value="Melayu" <c:if test="${guest.guestGender == 'Melayu'}">Selected</c:if>>Melayu</option>
+                                <option value="Cina" <c:if test="${guest.guestGender == 'Cina'}">Selected</c:if>>Cina</option>
+                                <option value="India" <c:if test="${guest.guestGender == 'India'}">Selected</c:if>>India</option>
                             </select>
                         </div>
                     </div>
@@ -221,9 +221,9 @@
                         <div class="col-8">
                             <select name="guestReligion" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="Islam" <c:if test="${guest.guestGender == "Islam"}">Selected</c:if>>Islam</option>
-                                <option value="Budha" <c:if test="${guest.guestGender == "Budha"}">Selected</c:if>>Budha</option>
-                                <option value="Christian" <c:if test="${guest.guestGender == "Christian"}">Selected</c:if>>Christian</option>
+                                <option value="Islam" <c:if test="${guest.guestGender == 'Islam'}">Selected</c:if>>Islam</option>
+                                <option value="Budha" <c:if test="${guest.guestGender == 'Budha'}">Selected</c:if>>Budha</option>
+                                <option value="Christian" <c:if test="${guest.guestGender == 'Christian'}">Selected</c:if>>Christian</option>
                             </select>
                         </div>
                     </div>

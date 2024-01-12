@@ -139,16 +139,16 @@
                             <tbody>
                                 <c:forEach var="reservation" items="${reservation}">
                                 <tr>
-                                    <td class="text-center"><c:out value="${reservation.reservationID}"></td>
-                                    <td class="text-center"><c:out value="${reservation.guestICNumber}"></td>
-                                    <td class="text-center"><c:out value="${reservation.guestQuantity}"></td>
-                                    <td class="text-center"><c:out value="${reservation.durationOfStay}"></td>
-                                    <td class="text-center" width="100"><c:out value="${reservation.dateStart}"></td>
-                                    <td class="text-center" width="100"><c:out value="${reservation.dateEnd}"></td>
-                                    <td class="text-center"><c:out value="${reservation.totalAdult}"></td>
-                                    <td class="text-center"><c:out value="${reservation.totalKids}"></td>
-                                    <td class="text-center"><c:out value="${reservation.totalRoom}"></td>
-                                    <td class="text-center"><c:out value="${reservation.totalPayment}"></td>
+                                    <td class="text-center"><c:out value="${reservation.reservationID}"/></td>
+                                    <td class="text-center"><c:out value="${reservation.guestICNumber}"/></td>
+                                    <td class="text-center"><c:out value="${reservation.guestQuantity}"/></td>
+                                    <td class="text-center"><c:out value="${reservation.durationOfStay}"/></td>
+                                    <td class="text-center" width="100"><c:out value="${reservation.dateStart}"/></td>
+                                    <td class="text-center" width="100"><c:out value="${reservation.dateEnd}"/></td>
+                                    <td class="text-center"><c:out value="${reservation.totalAdult}"/></td>
+                                    <td class="text-center"><c:out value="${reservation.totalKids}"/></td>
+                                    <td class="text-center"><c:out value="${reservation.totalRoom}"/></td>
+                                    <td class="text-center"><c:out value="${reservation.totalPayment}"/></td>
                                     <td class="text-center">
                                         <form action="StaffController?action=updateStatus&user=manager">
                                             <div class="custom_select text-center">

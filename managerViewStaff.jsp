@@ -194,8 +194,8 @@
                         <div class="col-8">
                             <select name="staffGender" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="Male" <c:if test="${staff.staffGender == "Male"}">Selected</c:if>>Male</option>
-                                <option value="Female" <c:if test="${staff.staffGender == "Female"}">Selected</c:if>>Female</option>
+                                <option value="Male" <c:if test="${staff.staffGender == 'Male'}">Selected</c:if>>Male</option>
+                                <option value="Female" <c:if test="${staff.staffGender == 'Female'}">Selected</c:if>>Female</option>
                             </select>
                         </div>
                     </div>
@@ -210,9 +210,9 @@
                         <div class="col-8">
                             <select name="staffRace" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="Melayu" <c:if test="${staff.staffRace == "Melayu"}">Selected</c:if>>Melayu</option>
-                                <option value="Cina" <c:if test="${staff.staffRace == "Cina"}">Selected</c:if>>Cina</option>
-                                <option value="India" <c:if test="${staff.staffRace == "India"}">Selected</c:if>>India</option>
+                                <option value="Melayu" <c:if test="${staff.staffRace == 'Melayu'}">Selected</c:if>>Melayu</option>
+                                <option value="Cina" <c:if test="${staff.staffRace == 'Cina'}">Selected</c:if>>Cina</option>
+                                <option value="India" <c:if test="${staff.staffRace == 'India'}">Selected</c:if>>India</option>
                             </select>
                         </div>
                     </div>
@@ -227,9 +227,9 @@
                         <div class="col-8">
                             <select name="staffReligion" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="Islam" <c:if test="${staff.staffReligion == "Islam"}">Selected</c:if>>Islam</option>
-                                <option value="Budha" <c:if test="${staff.staffReligion == "Budha"}">Selected</c:if>>Budha</option>
-                                <option value="Christian" <c:if test="${staff.staffReligion == "Christian"}">Selected</c:if>>Christian</option>
+                                <option value="Islam" <c:if test="${staff.staffReligion == 'Islam'}">Selected</c:if>>Islam</option>
+                                <option value="Budha" <c:if test="${staff.staffReligion == 'Budha'}">Selected</c:if>>Budha</option>
+                                <option value="Christian" <c:if test="${staff.staffReligion == 'Christian'}">Selected</c:if>>Christian</option>
                             </select>
 
                         </div>
@@ -245,10 +245,10 @@
                         <div class="col-8">
                             <select name="staffMaritalStatus" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="Single" <c:if test="${staff.staffMaritalStatus == "Single"}">Selected</c:if>>Single</option>
-                                <option value="Married" <c:if test="${staff.staffMaritalStatus == "Married"}">Selected</c:if>>Married</option>
-                                <option value="Divorce" <c:if test="${staff.staffMaritalStatus == "Divorce"}">Selected</c:if>>Divorce</option>
-                                <option value="Widowed" <c:if test="${staff.staffMaritalStatus == "Widowed"}">Selected</c:if>>Widowed</option>
+                                <option value="Single" <c:if test="${staff.staffMaritalStatus == 'Single'}">Selected</c:if>>Single</option>
+                                <option value="Married" <c:if test="${staff.staffMaritalStatus == 'Married'}">Selected</c:if>>Married</option>
+                                <option value="Divorce" <c:if test="${staff.staffMaritalStatus == 'Divorce'}">Selected</c:if>>Divorce</option>
+                                <option value="Widowed" <c:if test="${staff.staffMaritalStatus == 'Widowed'}">Selected</c:if>>Widowed</option>
                             </select>
 
                         </div>
@@ -264,9 +264,9 @@
                         <div class="col-8">
                             <select name="staffRole" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="Manager" <c:if test="${staff.staffRole == "Manager"}">Selected</c:if>>Manager</option>
-                                <option value="Front Office" <c:if test="${staff.staffRole == "Front Office"}">Selected</c:if>>Front Office</option>
-                                <option value="Finanace" <c:if test="${staff.staffRole == "Finanace"}">Selected</c:if>>Finanace</option>
+                                <option value="Manager" <c:if test="${staff.staffRole == 'Manager'}">Selected</c:if>>Manager</option>
+                                <option value="Front Office" <c:if test="${staff.staffRole == 'Front Office'}">Selected</c:if>>Front Office</option>
+                                <option value="Finanace" <c:if test="${staff.staffRole == 'Finanace'}">Selected</c:if>>Finanace</option>
                             </select>
 
                         </div>

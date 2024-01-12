@@ -149,7 +149,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="serviceID" value="<c:out value="${service.serviceID}">" id="" class="form-control" value ="1235002">
+                            <input type="text" name="serviceID" value="<c:out value="${service.serviceID}"/>" id="" class="form-control" value ="1235002">
                         </div>
                     </div>
 
@@ -161,7 +161,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="serviceName" value="<c:out value="${service.serviceName}">" id="" class="form-control" value ="Barbecue Set">
+                            <input type="text" name="serviceName" value="<c:out value="${service.serviceName}"/>" id="" class="form-control" value ="Barbecue Set">
                         </div>
                     </div>
 
@@ -173,7 +173,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="serviceType" value="<c:out value="${service.serviceType}">" id="" class="form-control" value ="Kitchen">
+                            <input type="text" name="serviceType" value="<c:out value="${service.serviceType}"/>" id="" class="form-control" value ="Kitchen">
                         </div>
                     </div>
 
@@ -185,7 +185,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="servicePrice" value="<c:out value="${service.servicePrice}">" id="" class="form-control" value ="15.00">
+                            <input type="text" name="servicePrice" value="<c:out value="${service.servicePrice}"/>" id="" class="form-control" value ="15.00">
                         </div>
                     </div>
 

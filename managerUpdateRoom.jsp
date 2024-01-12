@@ -193,7 +193,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="roomSize" value="<c:out value="${room.roomSize}">" id="" class="form-control" placeholder="22 x 28 ft">
+                            <input type="text" name="roomSize" value="<c:out value="${room.roomSize}"/>" id="" class="form-control" placeholder="22 x 28 ft">
                         </div>
                     </div>
                     <div class="row m-5">
