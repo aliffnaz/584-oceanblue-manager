@@ -154,20 +154,6 @@
                                     <td class="text-center"><a href="managerViewStaff.jsp?id=<c:out valiue="${staff.staffID}"/>"><i class="bi bi-eye-fill"></i></a></td>
                                 </tr>
                                     </c:forEach>
-                                <tr>
-                                    <td class="text-center">2</td>
-                                    <td>Anas Ali</td>
-                                    <td>990912035671</td>
-                                    <td>Front Office</td>
-                                    <td class="text-center"><a href="managerViewStaff.html"><i class="bi bi-eye-fill"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">3</td>
-                                    <td>Tengku Sofiya</td>
-                                    <td>971203045644</td>
-                                    <td>Finance</td>
-                                    <td class="text-center"><a href="managerViewStaff.html"><i class="bi bi-eye-fill"></i></a></td>
-                                </tr>
                            
                             </tbody>
                         </table>
