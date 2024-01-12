@@ -152,9 +152,10 @@
                                     <td class="text-center">
                                         <form action="StaffController?action=updateStatus&user=manager">
                                             <div class="custom_select text-center">
-                                                <select name="Status" id="Status" class="wide">
-                                                    <option value="Pending Payment">Pending Payment</option>
-                                                    <option value="paid">Paid</option>
+                                                <select name="reserveStatus" id="Status" class="wide">
+                                                    <option value="">Select</option>
+                                                    <option value="Pending Payment" <c:if test="${reservation.reserveStatus == 'Pending Payment'}">Selected</c:if>>Pending Payment</option>
+                                                    <option value="Paid" <c:if test="${reservation.reserveStatus == 'Paid'}">Selected</c:if>>Paid</option>
                                                 </select>
                                             </div>
                                             <a href="">Confirm</a>
@@ -184,29 +185,7 @@
                                         </form>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="text-center">RS003</td>
-                                    <td class="text-center">970625040312</td>
-                                    <td class="text-center">7</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">1-1-2023</td>
-                                    <td class="text-center">3-1-2023</td>
-                                    <td class="text-center">4</td>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">RM160.00</td>
-                                    <td class="text-center">
-                                        <form action="managerViewReservation.html">
-                                            <div class="custom_select">
-                                                <select name="Status" id="Status" class="wide" disabled>
-                                                    <option value="Pending Payment">Pending Payment</option>
-                                                    <option value="paid" selected>Paid</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                               
+                                
                                
                             </tbody>
                         </table>
