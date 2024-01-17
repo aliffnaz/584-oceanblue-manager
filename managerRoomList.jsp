@@ -14,13 +14,13 @@
 <!-- Favicons-->
 <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 <link rel="apple-touch-icon" type="image/x-icon"
-	href="img/apple-touch-icon-57x57-precomposed.png">
+	href="img/logo_dchalet.png">
 <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72"
-	href="img/apple-touch-icon-72x72-precomposed.png">
+	href="img/logo_dchalet.png">
 <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
-	href="img/apple-touch-icon-114x114-precomposed.png">
+	href="img/logo_dchalet.png">
 <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
-	href="img/apple-touch-icon-144x144-precomposed.png">
+	href="img/logo_dchalet.png">
 
 <!-- GOOGLE WEB FONT-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,10 @@
 		<div data-loader="circle-side"></div>
 	</div>
 	<!-- /Page Preload -->
+
 	<div class="layer"></div>
+
+
 	<header class="reveal_header" style="background-color: #24262d;">
 		<div class="container">
 			<div class="row align-items-center">
@@ -128,121 +131,59 @@
 			<div class="row">
 				<div class="col"></div>
 				<div class="col-md card card-body py-5">
-					<!-- <div class="row mt-3">
-                        <div class="col-md-12 text-center">
-                            <div class="">
-                                <h1>Room Information</h1>
-                            </div>
-                        </div>
-                    </div> -->
-
-					<div class="row m-5">
-						<div class="col-2 text-center">
-							<a href="managerViewRoom.html">
-								<div class="bi bi-arrow-left-circle" style="font-size: 50px;"></div>
-							</a>
-						</div>
-						<div class="col-md-8 text-center pt-3">
-							<div class="">
-
-								<h1>Room Information</h1>
-							</div>
-						</div>
-						<div class="col-2"></div>
+					<div class="row my-3 text-center">
+						<span>
+							<h1>Room List</h1>
+						</span>
 					</div>
-					<form action="RoomController?action=managerUpdateRoom"
-						method="post">
-						<div class="row m-3">
-							<div class="col-1"></div>
-							<div class="col pt-3">
-								<span>
-									<h6>Room Number</h6>
-								</span>
-							</div>
-							<div class="col-8">
-								<input type="text" name="roomNum"
-									value="<c:out value="${room.roomNum}"/>" id=""
-									class="form-control" placeholder="A01">
-							</div>
+					<div class="row mx-2">
+						<table class="table table-hover table-bordered">
+							<thead>
+								<th class="text-center">Room Number</th>
+								<th class="text-center">Max Guest</th>
+								<th class="text-center">Room Rate</th>
+								<th class="text-center">Room Type</th>
+								<th class="text-center">Room Size</th>
+								<th class="text-center" colspan="2">Action</th>
+							</thead>
+							<tbody>
+								<c:forEach var="room" items="${rooms}">
+									<tr>
+										<td class="text-center"><c:out value="${room.roomNum}" /></td>
+										<td class="text-center"><c:out value="${room.maxGuest}" /></td>
+										<td class="text-center"><c:out value="${room.roomRate}" /></td>
+										<td class="text-center"><c:out value="${room.roomType}" /></td>
+										<td class="text-center"><c:out value="${room.roomSize}" /></td>
+										<td class="text-center"><a
+											href="RoomController?action=managerViewRoom&roomNum=<c:out value="${room.roomNum}"/>"><i
+												class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
+										<td class="text-center"><a
+											href="StaffController?id=<c:out value="${room.roomNum}"/>"><i
+												class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
+									</tr>
+								</c:forEach>
+								
+							</tbody>
+						</table>
+
+						<script>
+							function success() {
+								alert("Successfully Deleted");
+							}
+						</script>
+					</div>
+					<div class="row">
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col-2 text-center">
+							<a class="btn btn-dark" href="manager/managerAddRoom.html">Add</a>
 						</div>
-						<div class="row m-3">
-							<div class="col-1"></div>
-							<div class="col pt-3">
-								<span>
-									<h6>Max Guest</h6>
-								</span>
-							</div>
-							<div class="col-8">
-								<input type="number" name="maxGuest"
-									value="<c:out value="${room.maxGuest}"/>" id=""
-									class="form-control" placeholder="4">
-							</div>
-						</div>
-						<div class="row m-3">
-							<div class="col-1"></div>
-							<div class="col pt-3">
-								<span>
-									<h6>Room Rate</h6>
-								</span>
-							</div>
-							<div class="col-8">
-								<input type="text" name="roomRate"
-									value="<c:out value="${room.roomRate}"/>" id=""
-									class="form-control" placeholder="RM80.00">
-							</div>
-						</div>
-						<div class="row m-3">
-							<div class="col-1"></div>
-							<div class="col pt-3">
-								<span>
-									<h6>Room Type</h6>
-								</span>
-							</div>
-							<div class="col-8">
-								<select name="roomType" id="" class="form-control">
-									<option value="standard" style="font-size: 16px;"
-										<c:if test="${room.roomType == 'Standard'}" >Selected</c:if>>Standard</option>
-									<option value="deluxe" style="font-size: 16px;"
-										<c:if test="${room.roomType == 'Deluxe'}" >Selected</c:if>>Deluxe</option>
-								</select>
-							</div>
-						</div>
-						<div class="row m-3">
-							<div class="col-1"></div>
-							<div class="col pt-3">
-								<span>
-									<h6>Room Size</h6>
-								</span>
-							</div>
-							<div class="col-8">
-								<input type="text" name="roomSize"
-									value="<c:out value="${room.roomSize}"/>" id=""
-									class="form-control" placeholder="22 x 28 ft">
-							</div>
-						</div>
-						<div class="row m-5">
-							<div class="col text-center">
-								<button type="submit"
-									class="btn btn-dark btn-lg"
-									style="border-radius: 3px 3px 3px 3px; height: auto; width: 150px"
-									onclick="success()">Update</button>
-								<script>
-									function success() {
-										alert("Successfully Update");
-									}
-								</script>
-								&nbsp; <a href="RoomController?action=managerRoomList"
-									class="btn btn-danger btn-lg"
-									style="border-radius: 3px 3px 3px 3px; height: auto; width: 150px">Cancel</a>
-							</div>
-						</div>
-					</form>
+					</div>
 				</div>
+				<div class="col"></div>
 			</div>
-			<div class="container mt-5">&nbsp;</div>
-			<!-- <div class="row card card-body align-items-center"> -->
 		</div>
-		<!-- </div> -->
+		<br>
 	</main>
 
 	<footer class="revealed">
@@ -255,7 +196,8 @@
 					<h5>Contacts</h5>
 					<ul>
 						<li>Jalan Telok Gong / Pengkalan Balak, Kampung Sungai Tuang<br>78300
-							Masjid Tanah, Melaka<br> <br></li>
+							Masjid Tanah, Melaka<br>
+						<br></li>
 						<li><strong><a href="#0">dchaletombakbiru@gmail.com</a></strong></li>
 						<li><strong><a href="#0">016-2115359/012-2431337</a></strong></li>
 					</ul>

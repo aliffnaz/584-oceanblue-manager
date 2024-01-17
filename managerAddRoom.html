@@ -116,7 +116,7 @@
                                 <div class="bi bi-arrow-left-circle" style="font-size: 50px;"></div>
                             </a>
                         </div>
-                        <form action="../RoomController" method="post">
+                        <form action="../RoomController?action=managerAddRoom" method="post">
                         <div class="col-md-8 text-center pt-3">
                             <div class="">
                                 <h1>Add Room</h1>
@@ -204,8 +204,8 @@
                     </div>
                     <div class="row m-5">
                         <div class="col text-center">
-                            <a href="managerRoomList.html" class="btn btn-dark btn-lg"
-                                style="border-radius: 3px 3px 3px 3px; height: auto; width:150px" onclick="success()">Add</a>
+                            <button type="submit" class="btn btn-dark btn-lg"
+                                style="border-radius: 3px 3px 3px 3px; height: auto; width:150px" onclick="success()">Add</button>
 
 <!--                             <script>
                                 function success() {
@@ -213,7 +213,7 @@
                                 }
                             </script> -->
                             &nbsp;
-                            <a href="managerRoomList.html" class="btn btn-danger btn-lg"
+                            <a href="../RoomController?action=managerRoomList" class="btn btn-danger btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Cancel</a>
                         </div>
                         </form>

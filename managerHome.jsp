@@ -84,19 +84,19 @@
     <div class="sidebar-navigation">
       <nav>
         <ul class="level-1">
-          <li class=""><a href="managerHome.html"><i class="bi bi-house" style="font-size: 25px;"></i>
+          <li class=""><a href="managerHome.jsp"><i class="bi bi-house" style="font-size: 25px;"></i>
               &nbsp;Home</a></li>
           <li class=""><a href="managerUpdateStatus.html"><i class="bi bi-clipboard-check"
                 style="font-size: 25px;"></i>&nbsp; Room Reservation</a></li>
           <li><a href="managerStaffList.html"><i class="bi bi-person-badge" style="font-size: 25px;"></i>&nbsp; Manage
               Staff</a></li>
-          <li><a href="managerRoomList.html"><i class="bi bi-pencil-square" style="font-size: 25px;"></i>&nbsp; Manage
+          <li><a href="../RoomController?action=managerRoomList"><i class="bi bi-pencil-square" style="font-size: 25px;"></i>&nbsp; Manage
               Room</a></li>
           <li><a href="managerRoomServiceList.html"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
               Manage Room Service</a></li>
-          <li><a href="managerGuestList.html"><i class="bi bi-people" style="font-size: 25px;"></i>&nbsp; Manage
+          <li><a href="../StaffController?action=managerguestlist&target=guestList&user=manager"><i class="bi bi-people" style="font-size: 25px;"></i>&nbsp; Manage
               Guest</a></li>
-          <li><a href="managerGenerateReport.html"><i class="bi bi-file-earmark-bar-graph"
+          <li><a href=""><i class="bi bi-file-earmark-bar-graph"
                 style="font-size: 25px;"></i>&nbsp; Generate Report</a></li>
           <li class="mt-5"><a href="guestLogin.html" class="btn btn-danger pt-3"
               style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>

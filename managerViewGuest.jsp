@@ -161,7 +161,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="guestName" value="<c:out value="${guest.guestICNumber}"/>"  id="" class="form-control" placeholder="Haiqal" disabled>
+                            <input type="text" name="guestName" value="<c:out value="${guest.guestName}"/>"  id="" class="form-control" placeholder="Haiqal" disabled>
                         </div>
                     </div>
 
@@ -173,7 +173,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="guestPhoneNumber" value="<c:out value="${guest.guestICNumber}"/>" id="" class="form-control" placeholder="011-17246568" disabled>
+                            <input type="text" name="guestPhoneNumber" value="<c:out value="${guest.guestPhoneNumber}"/>" id="" class="form-control" placeholder="011-17246568" disabled>
                         </div>
                     </div>
 
@@ -204,9 +204,9 @@
                         <div class="col-8">
                             <select name="guestRace" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="Melayu" <c:if test="${guest.guestGender == 'Melayu'}">Selected</c:if>>Melayu</option>
-                                <option value="Cina" <c:if test="${guest.guestGender == 'Cina'}">Selected</c:if>>Cina</option>
-                                <option value="India" <c:if test="${guest.guestGender == 'India'}">Selected</c:if>>India</option>
+                                <option value="Melayu" <c:if test="${guest.guestRace == 'Melayu'}">Selected</c:if>>Melayu</option>
+                                <option value="Cina" <c:if test="${guest.guestRace  == 'Cina'}">Selected</c:if>>Cina</option>
+                                <option value="India" <c:if test="${guest.guestRace  == 'India'}">Selected</c:if>>India</option>
                             </select>
                         </div>
                     </div>
@@ -221,9 +221,9 @@
                         <div class="col-8">
                             <select name="guestReligion" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="Islam" <c:if test="${guest.guestGender == 'Islam'}">Selected</c:if>>Islam</option>
-                                <option value="Budha" <c:if test="${guest.guestGender == 'Budha'}">Selected</c:if>>Budha</option>
-                                <option value="Christian" <c:if test="${guest.guestGender == 'Christian'}">Selected</c:if>>Christian</option>
+                                <option value="Islam" <c:if test="${guest.guestReligion == 'Islam'}">Selected</c:if>>Islam</option>
+                                <option value="Budha" <c:if test="${guest.guestReligion== 'Budha'}">Selected</c:if>>Budha</option>
+                                <option value="Christian" <c:if test="${guest.guestReligion== 'Christian'}">Selected</c:if>>Christian</option>
                             </select>
                         </div>
                     </div>
@@ -256,7 +256,7 @@
                     <div class="row m-5">
                         <div class="col-1"></div>
                         <div class="col">
-                            <a href="managerGuestList.html" class="btn btn-dark btn-lg"
+                            <a href="./StaffController?action=managerguestlist&user=manager" class="btn btn-dark btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Back</a>
                         </div>
                     </div>

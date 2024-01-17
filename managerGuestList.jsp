@@ -148,33 +148,10 @@
                                     <td class="text-center"><c:out value="${guest.guestReligion}"/></td>
                                     <td class="text-center"><c:out value="${guest.guestEmail}"/></td>
                                     <td class="text-center"><c:out value="${guest.guestAddress}"/></td>
-                                    <td class="text-center"><a href="managerViewGuest.jsp?ic=<c:out value="${guest.guestICNumber}"/>"><i class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
+                                    <td class="text-center"><a href="./StaffController?action=managerviewguest&IC=<c:out value="${guest.guestICNumber}"/>"><i class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
                                 </tr>
             </c:forEach>
-                                <tr>
-                                    <td class="text-center">890524054568</td>
-                                    <td class="text-center">Azalea</td>
-                                    <td class="text-center">014-7138969</td>
-                                    <td class="text-center">020707-04-2222</td>
-                                    <td class="text-center">Female</td>
-                                    <td class="text-center">Malay</td>
-                                    <td class="text-center">Muslim</td>
-                                    <td class="text-center">No 42, Jalan PRI 22, Taman Paya Rumput Indah, 76450 Paya Rumput, Melaka</td>
-                                    <td class="text-center"><a href="managerViewGuest.html"><i class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
-                                    <td class="text-center"><a href=" "><i class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">990625040044</td>
-                                    <td class="text-center">Balqis</td>
-                                    <td class="text-center">014-6070102</td>
-                                    <td class="text-center">020625-04-4444</td>
-                                    <td class="text-center">Female</td>
-                                    <td class="text-center">Malay</td>
-                                    <td class="text-center">Muslim</td>
-                                    <td class="text-center">No 12 Jln Angkasa Nuri 47, Taman Angkasa Nuri, 76100 Durian Tunggal, Melaka</td>
-                                    <td class="text-center"><a href="managerViewGuest.html"><i class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
-                                    <td class="text-center"><a href=" "><i class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
-                                </tr>
+                               
                                
                             </tbody>
                         </table>

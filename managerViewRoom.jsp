@@ -139,7 +139,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="roomNumber" value="<c:out value="${room.roomID}"/>" id="" class="form-control" placeholder="A01" disabled>
+                            <input type="text" name="roomNumber" value="<c:out value="${room.roomNum}"/>" id="" class="form-control" placeholder="A01" disabled>
                         </div>
                     </div>
                     <div class="row m-3">
@@ -188,10 +188,10 @@
                     </div>
                     <div class="row m-5">
                         <div class="col text-center">
-                            <a href="managerUpdateRoom.html" class="btn btn-dark btn-lg"
+                            <a href="RoomController?action=managerUpdateRoomV&roomNum=<c:out value="${room.roomNum}"/>" class="btn btn-dark btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Edit</a>
                             &nbsp;
-                            <a href="managerRoomList.html" class="btn btn-danger btn-lg"
+                            <a href="RoomController?action=managerDeleteRoom&roomNum=<c:out value="${room.roomNum}"/>" class="btn btn-danger btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px" onclick="success()">Delete</a>
 
                             <script>
