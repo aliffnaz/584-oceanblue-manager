@@ -148,7 +148,7 @@
 							<div class="bi bi-person-badge" style="font-size: 150px"></div>
 						</div>
 					</div>
-					<form action="StaffController" method="post">
+					<form action="StaffController?action=managerUpdateStaff" method="post">
 						<div class="row m-3">
 							<div class="col-1"></div>
 							<div class="col pt-3">
@@ -196,8 +196,8 @@
                         <div class="col-8">
                             <select name="staffGender" class="form-control form-select">
                                 <option value="">Select</option>
-                                <option value="Male" <c:if test="${staff.staffGender eq Male}">selected</c:if>>Male</option>
-                                <option value="Female" <c:if test="${staff.staffGender eq Female}">selected</c:if>>Female</option>
+                                <option value="Male" <c:if test="${staff.staffGender == 'Male'}">selected</c:if>>Male</option>
+                                <option value="Female" <c:if test="${staff.staffGender == 'Female'}">selected</c:if>>Female</option>
                             </select>
                         </div>
                     </div>
@@ -212,9 +212,9 @@
                         <div class="col-8">
                             <select name="staffRace" id="" class="form-control form-select">
                                 <option value="">Select</option>
-                                <option value="Melayu"  <c:if test="${staff.staffGender eq Melayu}">selected</c:if>>Melayu</option>
-                                <option value="Cina"  <c:if test="${staff.staffGender eq Cina}">selected</c:if> >Cina</option>
-                                <option value="India"  <c:if test="${staff.staffGender eq India}">selected</c:if> >India</option>
+                                <option value="Melayu"  <c:if test="${staff.staffRace == 'Melayu'}">selected</c:if>>Melayu</option>
+                                <option value="Cina"  <c:if test="${staff.staffRace == 'Cina'}">selected</c:if> >Cina</option>
+                                <option value="India"  <c:if test="${staff.staffRace == 'India'}">selected</c:if> >India</option>
                             </select>
                         </div>
                     </div>
@@ -229,9 +229,9 @@
                         <div class="col-8">
                             <select name="staffReligion" class="form-control form-select">
                                 <option value="">Select</option>
-                                <option value="Islam" <c:if test="${staff.staffGender eq Islam}">selected</c:if>>Islam</option>
-                                <option value="Budha" <c:if test="${staff.staffGender eq Budha}">selected</c:if>>Budha</option>
-                                <option value="Christian" <c:if test="${staff.staffGender eq Christian}">selected</c:if>>Christian</option>
+                                <option value="Islam" <c:if test="${staff.staffReligion == 'Islam'}">selected</c:if>>Islam</option>
+                                <option value="Budha" <c:if test="${staff.staffReligion == 'Budha'}">selected</c:if>>Budha</option>
+                                <option value="Christian" <c:if test="${staff.staffReligion == 'Christian'}">selected</c:if>>Christian</option>
                             </select>
                         </div>
                     </div>
@@ -246,10 +246,10 @@
                         <div class="col-8">
                             <select name="staffMaritalStatus" id="" class="form-control form-select">
                                 <option value="">Select</option>
-                                <option value="Single" <c:if test="${staff.staffGender eq Single}">selected</c:if>>Single</option>
-                                <option value="Married" <c:if test="${staff.staffGender eq Married}">selected</c:if>>Married</option>
-                                <option value="Divorce" <c:if test="${staff.staffGender eq Divorce}">selected</c:if>>Divorce</option>
-                                <option value="Widowed" <c:if test="${staff.staffGender eq Widowed}">selected</c:if>>Widowed</option>
+                                <option value="Single" <c:if test="${staff.staffMaritalStatus == 'Single'}">selected</c:if>>Single</option>
+                                <option value="Married" <c:if test="${staff.staffMaritalStatus == 'Married'}">selected</c:if>>Married</option>
+                                <option value="Divorce" <c:if test="${staff.staffMaritalStatus == 'Divorce'}">selected</c:if>>Divorce</option>
+                                <option value="Widowed" <c:if test="${staff.staffMaritalStatus == 'Widowed'}">selected</c:if>>Widowed</option>
                             </select>
 
                         </div>
@@ -265,9 +265,9 @@
                         <div class="col-8">
                             <select name="staffRole" id="" class="form-control form-select">
                                 <option value="">Select</option>
-                                <option value="Manager" <c:if test="${staff.staffGender eq Manager}">selected</c:if>>Manager</option>
-                                <option value="Front Office" <c:if test="${staff.staffGender eq Front Office}">selected</c:if>>Front Office</option>
-                                <option value="Finanace" <c:if test="${staff.staffGender eq Finanace}">selected</c:if>>Finanace</option>
+                                <option value="Manager" <c:if test="${staff.staffRole == 'Manager'}">selected</c:if>>Manager</option>
+                                <option value="Front Office" <c:if test="${staff.staffRole == 'Front Office'}">selected</c:if>>Front Office</option>
+                                <option value="Finanace" <c:if test="${staff.staffRole == 'Finanace'}">selected</c:if>>Finanace</option>
                             </select>
 
                         </div>
@@ -313,8 +313,8 @@
                     <div class="row m-5">
                         <div class="col"></div>
                         <div class="col-6 text-center">
-                            <a href="managerViewStaff.jsp?id=<c:out value="${staff.staffICNumber}"/>" class="btn btn-dark btn-md"
-                                style="border-radius: 3px 3px 3px 3px; height: auto; width:150px" onclick="success()">Update</a>
+                            <button type="submit" class="btn btn-dark btn-md"
+                                style="border-radius: 3px 3px 3px 3px; height: auto; width:150px" onclick="success()">Update</button>
 
                                 <script>
                                     function success() {
@@ -323,7 +323,7 @@
     
                                 </script>
 
-                            <a href="managerStaffList.jsp" class="btn btn-danger btn-md"
+                            <a href="StaffController?action=managerStaffList" class="btn btn-danger btn-md"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Cancel</a>
 
                         </form>

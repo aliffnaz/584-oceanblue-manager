@@ -88,13 +88,13 @@
               &nbsp;Home</a></li>
           <li class=""><a href="managerUpdateStatus.html"><i class="bi bi-clipboard-check"
                 style="font-size: 25px;"></i>&nbsp; Room Reservation</a></li>
-          <li><a href="managerStaffList.html"><i class="bi bi-person-badge" style="font-size: 25px;"></i>&nbsp; Manage
+          <li><a href="../StaffController?action=managerStaffList"><i class="bi bi-person-badge" style="font-size: 25px;"></i>&nbsp; Manage
               Staff</a></li>
           <li><a href="../RoomController?action=managerRoomList"><i class="bi bi-pencil-square" style="font-size: 25px;"></i>&nbsp; Manage
               Room</a></li>
-          <li><a href="managerRoomServiceList.html"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
+          <li><a href="../ServiceController?action=managerServiceList"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
               Manage Room Service</a></li>
-          <li><a href="../StaffController?action=managerguestlist&target=guestList&user=manager"><i class="bi bi-people" style="font-size: 25px;"></i>&nbsp; Manage
+          <li><a href="../GuestController?action=managerguestlist&target=guestList&user=manager"><i class="bi bi-people" style="font-size: 25px;"></i>&nbsp; Manage
               Guest</a></li>
           <li><a href=""><i class="bi bi-file-earmark-bar-graph"
                 style="font-size: 25px;"></i>&nbsp; Generate Report</a></li>

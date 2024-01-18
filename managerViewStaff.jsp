@@ -125,7 +125,7 @@
 
                     <div class="row mt-3">
                         <div class="col-3 text-center">
-                            <a href="managerStaffList.html">
+                            <a href="StaffController?action=managerStaffList">
                                 <div class="bi bi-arrow-left-circle" style="font-size: 50px;"></div>
                             </a>
                         </div>
@@ -313,10 +313,10 @@
                         <div class="col"></div>
 
                         <div class="col-6 text-center">
-                            <a href="managerStaffUpdate.html" class="btn btn-dark btn-md"
+                            <a href="StaffController?action=managerStaffUpdateV&staffICNumber=<c:out value="${staff.staffICNumber}"/>" class="btn btn-dark btn-md"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Edit</a>
 
-                            <a href="managerStaffList.html" class="btn btn-danger btn-md"
+                            <a href="StaffController?action=managerTerminateStaff&staffICNumber=<c:out value="${staff.staffICNumber}"/>" class="btn btn-danger btn-md"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px"
                                 onclick="success()">Terminate</a>
                         </div>
