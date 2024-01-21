@@ -13,6 +13,8 @@ if (managerICNumber != null) {
 	login = false;
 }
 
+%>  
+
 <!DOCTYPE html>
 <html lang="zxx">
 
