@@ -85,22 +85,20 @@
 		<div class="sidebar-navigation">
 			<nav>
 				<ul class="level-1">
-					<li class=""><a href="SidebarController?action=managerHome&user=manager&staffICNum=${staff.staffICNum}"><i class="bi bi-house" style="font-size: 25px;"></i>
-                            &nbsp;Home</a></li>
-                    <li class=""><a href="SidebarController?action=managerUpdateStatus&user=manager&staffICNum=${staff.staffICNum}"><i class="bi bi-clipboard-check"
-                                style="font-size: 25px;"></i>&nbsp; Room Reservation</a></li>
-                    <li><a href="SidebarController?action=managerStaffList&user=manager&staffICNum=${staff.staffICNum}"><i class="bi bi-person-badge"
-                                style="font-size: 25px;"></i>&nbsp; Manage Staff</a></li>
-                    <li><a href="SidebarController?action=managerRoomList&user=manager&staffICNum=${staff.staffICNum}"><i class="bi bi-pencil-square"
-                                style="font-size: 25px;"></i>&nbsp; Manage Room</a></li>
-                    <li><a href="SidebarController?action=managerServiceList&user=manager&staffICNum=${staff.staffICNum}"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
-                            Manage Room Service</a></li>
-                    <li><a href="SidebarController?action=managerGuestList&user=manager&staffICNum=${staff.staffICNum}"><i class="bi bi-people"
-                            style="font-size: 25px;"></i>&nbsp; Manage Guest</a></li>
-                    <li><a href="SidebarController?action=managerGenerateReport&user=manager&staffICNum=${staff.staffICNum}"><i class="bi bi-file-earmark-bar-graph"
-                                style="font-size: 25px;"></i>&nbsp; Generate Report</a></li>
-                    <li class="mt-5"><a href="LoginController?action=logout" class="btn btn-danger pt-3"
-                            style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>>
+					<li class=""><a href="SidebarController?action=managerHome&user=manager&staffICNumber=${staff.staffICNumber}"><i class="bi bi-house" style="font-size: 25px;"></i>
+                    		        &nbsp;Home</a></li>
+                    		<li class=""><a href="SidebarController?action=managerUpdateStatus&user=manager&staffICNumber=${staff.staffICNumber}"><i class="bi bi-clipboard-check"
+                    	            style="font-size: 25px;"></i>&nbsp; Room Reservation</a></li>
+                    		<li><a href="SidebarController?action=managerStaffList&user=manager&staffICNumber=${staff.staffICNumber}"><i class="bi bi-person-badge"
+                    	            style="font-size: 25px;"></i>&nbsp; Manage Staff</a></li>
+                    		<li><a href="SidebarController?action=managerRoomList&user=manager&staffICNumber=${staff.staffICNumber}"><i class="bi bi-pencil-square"
+                        	        style="font-size: 25px;"></i>&nbsp; Manage Room</a></li>
+                    		<li><a href="SidebarController?action=managerServiceList&user=manager&staffICNumber=${staff.staffICNumber}"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
+                        		    Manage Room Service</a></li>
+                    		<li><a href="SidebarController?action=managerGuestList&user=manager&staffICNumber=${staff.staffICNumber}"><i class="bi bi-people"
+                        		    style="font-size: 25px;"></i>&nbsp; Manage Guest</a></li>
+                    		<li class="mt-5"><a href="LoginController?action=logout" class="btn btn-danger pt-3"
+                        		    style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
 				</ul>
 				<div class="panel_footer">
 					<div class="copy">
