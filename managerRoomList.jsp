@@ -11,6 +11,7 @@ if (managerICNumber != null) {
 	login = true;
 } else {
 	login = false;
+	response.sendRedirect("../guest/guestLogin.jsp");
 }
 
 %>  
