@@ -92,7 +92,7 @@ if (managerICNumber != null) {
         <div class="sidebar-navigation">
             <nav>
                 <ul class="level-1">
-                    <li class=""><a href="SidebarController?action=managerHome&user=manager&staffICNumber=${staff.staffICNumber}"><i class="bi bi-house" style="font-size: 25px;"></i>
+                    <li class=""><a href="SidebarController?action=managerHome&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-house" style="font-size: 25px;"></i>
                     		        &nbsp;Home</a></li>
                     		<li class=""><a href="SidebarController?action=managerUpdateStatus&user=manager&staffICNumber=${staff.staffICNumber}"><i class="bi bi-clipboard-check"
                     	            style="font-size: 25px;"></i>&nbsp; Room Reservation</a></li>
