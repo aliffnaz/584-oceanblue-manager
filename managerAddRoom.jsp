@@ -1,4 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<%
+if ((String) session.getAttribute("guestICNumber") == null) {
+	response.sendRedirect("../guest/guestLogin.jsp");
+} else {
+	String guestICNumber = (String) session.getAttribute("guestICNumber");
+	boolean login;
+
+	if (guestICNumber != null) {
+		//response.sendRedirect("");
+		login = true;
+	} else {
+		login = false;
+	}
+}
+%>
+    
 <!DOCTYPE html>
 <html lang="zxx">
 
