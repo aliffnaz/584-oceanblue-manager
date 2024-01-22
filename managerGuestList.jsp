@@ -7,7 +7,7 @@ String managerICNumber=null;
 if ((String) session.getAttribute("managerICNumber") == null) {
 	response.sendRedirect("../guest/guestLogin.jsp");
 } else {
-	String managerICNumber = (String) session.getAttribute("managerICNumber");
+	managerICNumber = (String) session.getAttribute("managerICNumber");
 	boolean login;
 
 	if (managerICNumber != null) {

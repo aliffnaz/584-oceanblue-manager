@@ -3,11 +3,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%
-String managerICNumber=null;
+String managerICNumber = null;
 if ((String) session.getAttribute("managerICNumber") == null) {
 	response.sendRedirect("../guest/guestLogin.jsp");
 } else {
-	String managerICNumber = (String) session.getAttribute("managerICNumber");
+	managerICNumber = (String) session.getAttribute("managerICNumber");
 	boolean login;
 
 	if (managerICNumber != null) {
@@ -103,20 +103,32 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 		<div class="sidebar-navigation">
 			<nav>
 				<ul class="level-1">
-					<li class=""><a href="SidebarController?action=managerHome&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-house" style="font-size: 25px;"></i>
-                    		        &nbsp;Home</a></li>
-	                    		<li class=""><a href="SidebarController?action=managerUpdateStatus&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-clipboard-check"
-	                    	            style="font-size: 25px;"></i>&nbsp; Room Reservation</a></li>
-	                    		<li><a href="SidebarController?action=managerStaffList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-person-badge"
-	                    	            style="font-size: 25px;"></i>&nbsp; Manage Staff</a></li>
-	                    		<li><a href="SidebarController?action=managerRoomList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-pencil-square"
-	                        	        style="font-size: 25px;"></i>&nbsp; Manage Room</a></li>
-	                    		<li><a href="SidebarController?action=managerServiceList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
-	                        		    Manage Room Service</a></li>
-	                    		<li><a href="SidebarController?action=managerGuestList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-people"
-	                        		    style="font-size: 25px;"></i>&nbsp; Manage Guest</a></li>
-	                    		<li class="mt-5"><a href="LoginController?action=logout" class="btn btn-danger pt-3"
-	                        		    style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
+					<li class=""><a
+						href="SidebarController?action=managerHome&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-house" style="font-size: 25px;"></i> &nbsp;Home</a></li>
+					<li class=""><a
+						href="SidebarController?action=managerUpdateStatus&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-clipboard-check" style="font-size: 25px;"></i>&nbsp;
+							Room Reservation</a></li>
+					<li><a
+						href="SidebarController?action=managerStaffList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-person-badge" style="font-size: 25px;"></i>&nbsp;
+							Manage Staff</a></li>
+					<li><a
+						href="SidebarController?action=managerRoomList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-pencil-square" style="font-size: 25px;"></i>&nbsp;
+							Manage Room</a></li>
+					<li><a
+						href="SidebarController?action=managerServiceList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-nut" style="font-size: 25px;"></i>&nbsp; Manage Room
+							Service</a></li>
+					<li><a
+						href="SidebarController?action=managerGuestList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-people" style="font-size: 25px;"></i>&nbsp; Manage
+							Guest</a></li>
+					<li class="mt-5"><a href="LoginController?action=logout"
+						class="btn btn-danger pt-3"
+						style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
 				</ul>
 				<div class="panel_footer">
 					<div class="copy">
@@ -231,8 +243,7 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 						</div>
 						<div class="row m-5">
 							<div class="col text-center">
-								<button type="submit"
-									class="btn btn-dark btn-lg"
+								<button type="submit" class="btn btn-dark btn-lg"
 									style="border-radius: 3px 3px 3px 3px; height: auto; width: 150px"
 									onclick="success()">Update</button>
 								<script>

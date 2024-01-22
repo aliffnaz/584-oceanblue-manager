@@ -3,11 +3,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%
-String managerICNumber=null;
+String managerICNumber = null;
 if ((String) session.getAttribute("managerICNumber") == null) {
 	response.sendRedirect("../guest/guestLogin.jsp");
 } else {
-	String managerICNumber = (String) session.getAttribute("managerICNumber");
+	managerICNumber = (String) session.getAttribute("managerICNumber");
 	boolean login;
 
 	if (managerICNumber != null) {
@@ -104,20 +104,32 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 		<div class="sidebar-navigation">
 			<nav>
 				<ul class="level-1">
-					<li class=""><a href="SidebarController?action=managerHome&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-house" style="font-size: 25px;"></i>
-                    		        &nbsp;Home</a></li>
-	                    		<li class=""><a href="SidebarController?action=managerUpdateStatus&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-clipboard-check"
-	                    	            style="font-size: 25px;"></i>&nbsp; Room Reservation</a></li>
-	                    		<li><a href="SidebarController?action=managerStaffList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-person-badge"
-	                    	            style="font-size: 25px;"></i>&nbsp; Manage Staff</a></li>
-	                    		<li><a href="SidebarController?action=managerRoomList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-pencil-square"
-	                        	        style="font-size: 25px;"></i>&nbsp; Manage Room</a></li>
-	                    		<li><a href="SidebarController?action=managerServiceList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
-	                        		    Manage Room Service</a></li>
-	                    		<li><a href="SidebarController?action=managerGuestList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-people"
-	                        		    style="font-size: 25px;"></i>&nbsp; Manage Guest</a></li>
-	                    		<li class="mt-5"><a href="LoginController?action=logout" class="btn btn-danger pt-3"
-	                        		    style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
+					<li class=""><a
+						href="SidebarController?action=managerHome&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-house" style="font-size: 25px;"></i> &nbsp;Home</a></li>
+					<li class=""><a
+						href="SidebarController?action=managerUpdateStatus&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-clipboard-check" style="font-size: 25px;"></i>&nbsp;
+							Room Reservation</a></li>
+					<li><a
+						href="SidebarController?action=managerStaffList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-person-badge" style="font-size: 25px;"></i>&nbsp;
+							Manage Staff</a></li>
+					<li><a
+						href="SidebarController?action=managerRoomList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-pencil-square" style="font-size: 25px;"></i>&nbsp;
+							Manage Room</a></li>
+					<li><a
+						href="SidebarController?action=managerServiceList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-nut" style="font-size: 25px;"></i>&nbsp; Manage Room
+							Service</a></li>
+					<li><a
+						href="SidebarController?action=managerGuestList&user=manager&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-people" style="font-size: 25px;"></i>&nbsp; Manage
+							Guest</a></li>
+					<li class="mt-5"><a href="LoginController?action=logout"
+						class="btn btn-danger pt-3"
+						style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
 				</ul>
 				<div class="panel_footer">
 					<div class="copy">
@@ -156,7 +168,8 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 							<div class="bi bi-person-badge" style="font-size: 150px"></div>
 						</div>
 					</div>
-					<form action="StaffController?action=managerUpdateStaff" method="post">
+					<form action="StaffController?action=managerUpdateStaff"
+						method="post">
 						<div class="row m-3">
 							<div class="col-1"></div>
 							<div class="col pt-3">
@@ -178,237 +191,261 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 								</span>
 							</div>
 							<div class="col-8">
-								<input type="text" name="staffICNumber" value="<c:out value="${staff.staffICNumber}"/>" class="form-control" value="770604051231"/>
-                        </div>
-                    </div>
+								<input type="text" name="staffICNumber"
+									value="<c:out value="${staff.staffICNumber}"/>"
+									class="form-control" value="770604051231" />
+							</div>
+						</div>
 
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Address</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="staffAddress" value="<c:out value="${staff.staffAddress}"/>" class="form-control" value="Silentmode, Bangi">
-                        </div>
-                    </div>
+						<div class="row m-3">
+							<div class="col-1"></div>
+							<div class="col pt-3">
+								<span>
+									<h6>Address</h6>
+								</span>
+							</div>
+							<div class="col-8">
+								<input type="text" name="staffAddress"
+									value="<c:out value="${staff.staffAddress}"/>"
+									class="form-control" value="Silentmode, Bangi">
+							</div>
+						</div>
 
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Gender</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <select name="staffGender" class="form-control form-select">
-                                <option value="">Select</option>
-                                <option value="Male" <c:if test="${staff.staffGender == 'Male'}">selected</c:if>>Male</option>
-                                <option value="Female" <c:if test="${staff.staffGender == 'Female'}">selected</c:if>>Female</option>
-                            </select>
-                        </div>
-                    </div>
+						<div class="row m-3">
+							<div class="col-1"></div>
+							<div class="col pt-3">
+								<span>
+									<h6>Gender</h6>
+								</span>
+							</div>
+							<div class="col-8">
+								<select name="staffGender" class="form-control form-select">
+									<option value="">Select</option>
+									<option value="Male"
+										<c:if test="${staff.staffGender == 'Male'}">selected</c:if>>Male</option>
+									<option value="Female"
+										<c:if test="${staff.staffGender == 'Female'}">selected</c:if>>Female</option>
+								</select>
+							</div>
+						</div>
 
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Race</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <select name="staffRace" id="" class="form-control form-select">
-                                <option value="">Select</option>
-                                <option value="Melayu"  <c:if test="${staff.staffRace == 'Melayu'}">selected</c:if>>Melayu</option>
-                                <option value="Cina"  <c:if test="${staff.staffRace == 'Cina'}">selected</c:if> >Cina</option>
-                                <option value="India"  <c:if test="${staff.staffRace == 'India'}">selected</c:if> >India</option>
-                            </select>
-                        </div>
-                    </div>
+						<div class="row m-3">
+							<div class="col-1"></div>
+							<div class="col pt-3">
+								<span>
+									<h6>Race</h6>
+								</span>
+							</div>
+							<div class="col-8">
+								<select name="staffRace" id="" class="form-control form-select">
+									<option value="">Select</option>
+									<option value="Melayu"
+										<c:if test="${staff.staffRace == 'Melayu'}">selected</c:if>>Melayu</option>
+									<option value="Cina"
+										<c:if test="${staff.staffRace == 'Cina'}">selected</c:if>>Cina</option>
+									<option value="India"
+										<c:if test="${staff.staffRace == 'India'}">selected</c:if>>India</option>
+								</select>
+							</div>
+						</div>
 
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Religion</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <select name="staffReligion" class="form-control form-select">
-                                <option value="">Select</option>
-                                <option value="Islam" <c:if test="${staff.staffReligion == 'Islam'}">selected</c:if>>Islam</option>
-                                <option value="Budha" <c:if test="${staff.staffReligion == 'Budha'}">selected</c:if>>Budha</option>
-                                <option value="Christian" <c:if test="${staff.staffReligion == 'Christian'}">selected</c:if>>Christian</option>
-                            </select>
-                        </div>
-                    </div>
+						<div class="row m-3">
+							<div class="col-1"></div>
+							<div class="col pt-3">
+								<span>
+									<h6>Religion</h6>
+								</span>
+							</div>
+							<div class="col-8">
+								<select name="staffReligion" class="form-control form-select">
+									<option value="">Select</option>
+									<option value="Islam"
+										<c:if test="${staff.staffReligion == 'Islam'}">selected</c:if>>Islam</option>
+									<option value="Budha"
+										<c:if test="${staff.staffReligion == 'Budha'}">selected</c:if>>Budha</option>
+									<option value="Christian"
+										<c:if test="${staff.staffReligion == 'Christian'}">selected</c:if>>Christian</option>
+								</select>
+							</div>
+						</div>
 
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Marital Status</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <select name="staffMaritalStatus" id="" class="form-control form-select">
-                                <option value="">Select</option>
-                                <option value="Single" <c:if test="${staff.staffMaritalStatus == 'Single'}">selected</c:if>>Single</option>
-                                <option value="Married" <c:if test="${staff.staffMaritalStatus == 'Married'}">selected</c:if>>Married</option>
-                                <option value="Divorce" <c:if test="${staff.staffMaritalStatus == 'Divorce'}">selected</c:if>>Divorce</option>
-                                <option value="Widowed" <c:if test="${staff.staffMaritalStatus == 'Widowed'}">selected</c:if>>Widowed</option>
-                            </select>
+						<div class="row m-3">
+							<div class="col-1"></div>
+							<div class="col pt-3">
+								<span>
+									<h6>Marital Status</h6>
+								</span>
+							</div>
+							<div class="col-8">
+								<select name="staffMaritalStatus" id=""
+									class="form-control form-select">
+									<option value="">Select</option>
+									<option value="Single"
+										<c:if test="${staff.staffMaritalStatus == 'Single'}">selected</c:if>>Single</option>
+									<option value="Married"
+										<c:if test="${staff.staffMaritalStatus == 'Married'}">selected</c:if>>Married</option>
+									<option value="Divorce"
+										<c:if test="${staff.staffMaritalStatus == 'Divorce'}">selected</c:if>>Divorce</option>
+									<option value="Widowed"
+										<c:if test="${staff.staffMaritalStatus == 'Widowed'}">selected</c:if>>Widowed</option>
+								</select>
 
-                        </div>
-                    </div>
+							</div>
+						</div>
 
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Role</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <select name="staffRole" id="" class="form-control form-select">
-                                <option value="">Select</option>
-                                <option value="Manager" <c:if test="${staff.staffRole == 'Manager'}">selected</c:if>>Manager</option>
-                                <option value="Front Office" <c:if test="${staff.staffRole == 'Front Office'}">selected</c:if>>Front Office</option>
-                                <option value="Finanace" <c:if test="${staff.staffRole == 'Finanace'}">selected</c:if>>Finanace</option>
-                            </select>
+						<div class="row m-3">
+							<div class="col-1"></div>
+							<div class="col pt-3">
+								<span>
+									<h6>Role</h6>
+								</span>
+							</div>
+							<div class="col-8">
+								<select name="staffRole" id="" class="form-control form-select">
+									<option value="">Select</option>
+									<option value="Manager"
+										<c:if test="${staff.staffRole == 'Manager'}">selected</c:if>>Manager</option>
+									<option value="Front Office"
+										<c:if test="${staff.staffRole == 'Front Office'}">selected</c:if>>Front
+										Office</option>
+									<option value="Finanace"
+										<c:if test="${staff.staffRole == 'Finanace'}">selected</c:if>>Finanace</option>
+								</select>
 
-                        </div>
-                    </div>
+							</div>
+						</div>
 
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Phone Number</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="staffPhoneNumber" id="" class="form-control" value="<c:out value="${staff.staffPhoneNumber}"/>">
-                        </div>
-                    </div>
+						<div class="row m-3">
+							<div class="col-1"></div>
+							<div class="col pt-3">
+								<span>
+									<h6>Phone Number</h6>
+								</span>
+							</div>
+							<div class="col-8">
+								<input type="text" name="staffPhoneNumber" id=""
+									class="form-control"
+									value="<c:out value="${staff.staffPhoneNumber}"/>">
+							</div>
+						</div>
 
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Email</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="staffEmail" id="" class="form-control" value="<c:out value="${staff.staffEmail}"/>">
-                        </div>
-                    </div>
+						<div class="row m-3">
+							<div class="col-1"></div>
+							<div class="col pt-3">
+								<span>
+									<h6>Email</h6>
+								</span>
+							</div>
+							<div class="col-8">
+								<input type="text" name="staffEmail" id="" class="form-control"
+									value="<c:out value="${staff.staffEmail}"/>">
+							</div>
+						</div>
 
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Password</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="staffPassword" id="" class="form-control" value="<c:out value="${staff.staffPassword}"/>">
-                        </div>
-                    </div>
-
-
-                    <div class="row m-5">
-                        <div class="col"></div>
-                        <div class="col-6 text-center">
-                            <button type="submit" class="btn btn-dark btn-md"
-                                style="border-radius: 3px 3px 3px 3px; height: auto; width:150px" onclick="success()">Update</button>
-
-                                <script>
-                                    function success() {
-                                        alert("Successfully Update");
-                                    }
-    
-                                </script>
-
-                            <a href="StaffController?action=managerStaffList" class="btn btn-danger btn-md"
-                                style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Cancel</a>
-
-                        </form>
-                        </div>
-                        <div class="col"></div>
-                    </div>
-
-
-                </div>
-
-
-                <div class="col">
-
-                </div>
-            </div>
-
-            <div class="container mt-5">
-                &nbsp;
-            </div>
+						<div class="row m-3">
+							<div class="col-1"></div>
+							<div class="col pt-3">
+								<span>
+									<h6>Password</h6>
+								</span>
+							</div>
+							<div class="col-8">
+								<input type="text" name="staffPassword" id=""
+									class="form-control"
+									value="<c:out value="${staff.staffPassword}"/>">
+							</div>
+						</div>
 
 
-            <!-- <div class="row card card-body align-items-center"> -->
+						<div class="row m-5">
+							<div class="col"></div>
+							<div class="col-6 text-center">
+								<button type="submit" class="btn btn-dark btn-md"
+									style="border-radius: 3px 3px 3px 3px; height: auto; width: 150px"
+									onclick="success()">Update</button>
+
+								<script>
+									function success() {
+										alert("Successfully Update");
+									}
+								</script>
+
+								<a href="StaffController?action=managerStaffList"
+									class="btn btn-danger btn-md"
+									style="border-radius: 3px 3px 3px 3px; height: auto; width: 150px">Cancel</a>
+					</form>
+				</div>
+				<div class="col"></div>
+			</div>
+
+
+		</div>
+
+
+		<div class="col"></div>
+		</div>
+
+		<div class="container mt-5">&nbsp;</div>
+
+
+		<!-- <div class="row card card-body align-items-center"> -->
 
 
 
-        </div>
-        <!-- </div> -->
+		</div>
+		<!-- </div> -->
 
-    </main>
+	</main>
 
-    <footer class="revealed">
-        <div class="footer_bg">
-            <div class="gradient_over"></div>
+	<footer class="revealed">
+		<div class="footer_bg">
+			<div class="gradient_over"></div>
 
-        </div>
-        <div class="container">
-            <div class="row move_content">
-                <div class="col-lg-4 col-md-12">
-                    <h5>Contacts</h5>
-                    <ul>
-                        <li>Jalan Telok Gong / Pengkalan Balak, Kampung Sungai Tuang<br>78300 Masjid Tanah,
-                            Melaka<br><br></li>
-                        <li><strong><a href="#0">dchaletombakbiru@gmail.com</a></strong></li>
-                        <li><strong><a href="#0">016-2115359/012-2431337</a></strong></li>
-                    </ul>
-                    <div class="social">
-                        <ul>
-                            <li><a href="#0"><i class="bi bi-instagram"></i></a></li>
-                            <li><a href="#0"><i class="bi bi-whatsapp"></i></a></li>
-                            <li><a href="#0"><i class="bi bi-facebook"></i></a></li>
-                            <li><a href="#0"><i class="bi bi-twitter"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/container-->
-        <div class="copy">
-            <div class="container">
-                © Ombak Biru Chalet - by <a href="#">Ocean Blue Lemond</a>
-            </div>
-        </div>
-    </footer>
-    <!-- /footer -->
+		</div>
+		<div class="container">
+			<div class="row move_content">
+				<div class="col-lg-4 col-md-12">
+					<h5>Contacts</h5>
+					<ul>
+						<li>Jalan Telok Gong / Pengkalan Balak, Kampung Sungai Tuang<br>78300
+							Masjid Tanah, Melaka<br>
+						<br></li>
+						<li><strong><a href="#0">dchaletombakbiru@gmail.com</a></strong></li>
+						<li><strong><a href="#0">016-2115359/012-2431337</a></strong></li>
+					</ul>
+					<div class="social">
+						<ul>
+							<li><a href="#0"><i class="bi bi-instagram"></i></a></li>
+							<li><a href="#0"><i class="bi bi-whatsapp"></i></a></li>
+							<li><a href="#0"><i class="bi bi-facebook"></i></a></li>
+							<li><a href="#0"><i class="bi bi-twitter"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/container-->
+		<div class="copy">
+			<div class="container">
+				© Ombak Biru Chalet - by <a href="#">Ocean Blue Lemond</a>
+			</div>
+		</div>
+	</footer>
+	<!-- /footer -->
 
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+	<div class="progress-wrap">
+		<svg class="progress-circle svg-content" width="100%" height="100%"
+			viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
-    </div>
-    <!-- /back to top -->
+	</div>
+	<!-- /back to top -->
 
-    <!-- COMMON SCRIPTS -->
-    <script src="js/common_scripts.js"></script>
-    <script src="js/common_functions.js"></script>
-    <script src="js/datepicker_inline.js"></script>
-    <script src="phpmailer/validate.js"></script>
+	<!-- COMMON SCRIPTS -->
+	<script src="js/common_scripts.js"></script>
+	<script src="js/common_functions.js"></script>
+	<script src="js/datepicker_inline.js"></script>
+	<script src="phpmailer/validate.js"></script>
 
 </body>
 
