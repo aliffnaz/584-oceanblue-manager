@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%
+String managerICNumber=null;
 if ((String) session.getAttribute("managerICNumber") == null) {
 	response.sendRedirect("../guest/guestLogin.jsp");
 } else {
