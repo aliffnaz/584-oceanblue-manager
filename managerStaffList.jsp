@@ -210,7 +210,7 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 						<div class="col"></div>
 						<div class="col"></div>
 						<div class="col-2 text-center">
-							<a class="btn btn-dark" href="manager/managerAddStaff.html">Add</a>
+							<a class="btn btn-dark" href="manager/managerAddStaff.jsp">Add</a>
 						</div>
 
 
