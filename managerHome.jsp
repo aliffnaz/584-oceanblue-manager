@@ -148,7 +148,7 @@ if ((String) session.getAttribute("managerICNumber") == null) {
                 <div class="card">
                   <div class="card-body">
                     <div id="creditSales" class="progressBar"></div>
-                    <h3>rm</h3>
+                    <h3>RM 4,550.00</h3>
                     <span class="progressTitle">Standard Room</span>
                   </div>
                 </div>
@@ -158,7 +158,7 @@ if ((String) session.getAttribute("managerICNumber") == null) {
                 <div class="card">
                   <div class="card-body">
                     <div id="channelSales" class="progressBar"></div>
-                    <h3>RM</h3>
+                    <h3>RM 6,700.00</h3>
                     <span class="progressTitle">Deluxe Room</span>
                   </div>
                 </div>
@@ -168,7 +168,7 @@ if ((String) session.getAttribute("managerICNumber") == null) {
                 <div class="card">
                   <div class="card-body">
                     <div id="directSales" class="progressBar"></div>
-                    <h3>rm</h3>
+                    <h3>RM 11,250.00</h3>
                     <span class="progressTitle">Total</span>
                   </div>
                 </div>
