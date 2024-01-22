@@ -9,7 +9,7 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 	String managerICNumber = (String) session.getAttribute("managerICNumber");
 	boolean login;
 
-	if (guestICNumber != null) {
+	if (managerICNumber != null) {
 		//response.sendRedirect("");
 		login = true;
 	} else {
