@@ -3,13 +3,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%
-if ((String) session.getAttribute("guestICNumber") == null) {
+if ((String) session.getAttribute("managerICNumber") == null) {
 	response.sendRedirect("../guest/guestLogin.jsp");
 } else {
-	String guestICNumber = (String) session.getAttribute("guestICNumber");
+	String managerICNumber = (String) session.getAttribute("managerICNumber");
 	boolean login;
 
-	if (guestICNumber != null) {
+	if (managerICNumber != null) {
 		//response.sendRedirect("");
 		login = true;
 	} else {
