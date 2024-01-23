@@ -222,7 +222,7 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 									<h6>Service Status</h6>
 								</span>
 							</div>
-							<div class="col-8">
+							<div class="col-8 custom_select">
 								<select name="roomType" id="" class="wide">
 									<option value="Available" style="font-size: 16px;">Available</option>
 									<option value="Booked" style="font-size: 16px;">Booked</option>

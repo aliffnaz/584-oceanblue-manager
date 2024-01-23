@@ -379,11 +379,7 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 								class="btn btn-dark btn-md"
 								style="border-radius: 3px 3px 3px 3px; height: auto; width: 150px">Edit</a>
 
-							<a
-								href="StaffController?action=managerTerminateStaff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"
-								class="btn btn-danger btn-md"
-								style="border-radius: 3px 3px 3px 3px; height: auto; width: 150px"
-								onclick="success()">Terminate</a>
+						
 						</div>
 						<div class="col"></div>
 					</div>

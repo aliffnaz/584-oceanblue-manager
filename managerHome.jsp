@@ -2,22 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<%
-String managerICNumber = null;
-if ((String) session.getAttribute("managerICNumber") == null) {
-	response.sendRedirect("../guest/guestLogin.jsp");
-} else {
-	managerICNumber = (String) session.getAttribute("managerICNumber");
-	boolean login;
 
-	if (managerICNumber != null) {
-		//response.sendRedirect("");
-		login = true;
-	} else {
-		login = false;
-	}
-}
-%>
 
 <!DOCTYPE html>
 <html lang="zxx">

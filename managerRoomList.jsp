@@ -177,9 +177,7 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 										<td class="text-center"><a
 											href="RoomController?action=managerViewRoom&roomNum=<c:out value="${room.roomNum}"/>"><i
 												class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
-										<td class="text-center"><a
-											href="StaffController?id=<c:out value="${room.roomNum}"/>"><i
-												class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
+
 									</tr>
 								</c:forEach>
 

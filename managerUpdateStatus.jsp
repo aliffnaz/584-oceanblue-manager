@@ -3,20 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%
-String managerICNumber = null;
-if ((String) session.getAttribute("managerICNumber") == null) {
-	response.sendRedirect("../guest/guestLogin.jsp");
-} else {
-	managerICNumber = (String) session.getAttribute("managerICNumber");
-	boolean login;
 
-	if (managerICNumber != null) {
-		//response.sendRedirect("");
-		login = true;
-	} else {
-		login = false;
-	}
-}
 %>
 
 <!DOCTYPE html>
@@ -202,7 +189,8 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 															<c:if test="${reservation.reserveStatus == 'Paid'}">Selected</c:if>>Paid</option>
 													</select>
 												</div>
-												<a href="">Confirm</a>
+												<a
+													href="SidebarController?action=managerHome&user=manager&managerICNumber=<c:out value="${staff.staffICNumber}"/>">Confirm</a>
 											</form>
 										</td>
 									</tr>

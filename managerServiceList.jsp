@@ -154,7 +154,7 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 				<div class="col-md card card-body py-5">
 					<div class="row m-5 text-center">
 						<span>
-							<h1>Room Service List</h1>
+							<h1> Service List</h1>
 						</span>
 					</div>
 					<div class="row mx-2">
@@ -177,10 +177,7 @@ if ((String) session.getAttribute("managerICNumber") == null) {
 										<td class="text-center"><a
 											href="ServiceController?action=managerUpdateServiceV&serviceID=<c:out value="${service.serviceID}"/>"><i
 												class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
-										<td class="text-center"><a
-											href="ServiceController?action=managerDeleteService&serviceID=<c:out value="${service.serviceID}"/>"
-											onclick="success()"><i class="bi bi-trash3-fill"
-												style="font-size: 20px;"></i></a></td>
+										
 									</tr>
 								</c:forEach>
 
